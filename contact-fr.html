@@ -10,7 +10,7 @@
 <body>
   <header class="site-header">
     <div class="header-inner">
-<img src="images/logo.png" alt="Le Nid à Paris logo" class="site-logo">
+      <img src="images/logo.png" alt="Le Nid à Paris logo" class="site-logo">
       <div class="brand">
         <div class="brand-name">Le Nid à Paris</div>
         <div class="brand-tagline">Conciergerie boutique pour pieds-à-terre parisiens</div>
@@ -41,27 +41,32 @@
             répondrai pour convenir d’un moment d’échange.
           </p>
 
-          <form>
+          <!-- ✅ Functional French contact form -->
+          <form action="https://formspree.io/f/mykggrnv">
             <div>
               <label for="nom">Nom</label><br>
-              <input type="text" id="nom" name="nom" placeholder="Votre nom">
+              <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
             </div>
+
             <div>
               <label for="email">Email</label><br>
-              <input type="email" id="email" name="email" placeholder="vous@example.com">
+              <input type="email" id="email" name="_replyto" placeholder="vous@example.com" required>
             </div>
+
             <div>
               <label for="message">Message</label><br>
-              <textarea id="message" name="message" placeholder="Parlez-moi de votre pied-à-terre, de sa localisation et de la fréquence de vos séjours."></textarea>
+              <textarea id="message" name="message" placeholder="Parlez-moi de votre pied-à-terre, de sa localisation et de la fréquence de vos séjours." required></textarea>
             </div>
+
+            <!-- Optional: redirect to a thank-you page -->
+            <!-- <input type="hidden" name="_next" value="https://lenidaparis.com/merci.html"> -->
+
             <div>
-              <input type="submit" class="button" value="Envoyer (exemple visuel)">
+              <button type="submit" class="button">Envoyer</button>
             </div>
           </form>
-          <p class="muted" style="margin-top:0.75rem;">
-            Ce formulaire est un exemple visuel. Pour le rendre fonctionnel, il pourra être relié plus tard à un service simple d’envoi d’e-mails.
-          </p>
         </div>
+
         <div class="contact-details">
           <div class="contact-label">Contact direct</div>
           <p>
@@ -71,6 +76,7 @@
             <strong>Email :</strong> votre-email@example.com<br>
             <strong>Téléphone :</strong> +33 6 00 00 00 00
           </p>
+
           <div class="contact-label" style="margin-top:1.25rem;">Zone d’intervention</div>
           <p>
             Basée à Paris, j’interviens principalement dans Paris intra-muros.
