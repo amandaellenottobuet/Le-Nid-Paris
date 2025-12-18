@@ -10,7 +10,7 @@
 <body>
   <header class="site-header">
     <div class="header-inner">
-<img src="images/logo.png" alt="Le Nid à Paris logo" class="site-logo">
+      <img src="images/logo.png" alt="Le Nid à Paris logo" class="site-logo">
       <div class="brand">
         <div class="brand-name">Le Nid à Paris</div>
         <div class="brand-tagline">Boutique concierge for Paris pied-à-terre owners</div>
@@ -40,39 +40,40 @@
             Please feel free to share a few details, and I will get back to you to propose a time to talk.
           </p>
 
-          <form action="https://formspree.io/f/mykggrnv">
-  <div>
-    <label for="name">Name</label><br>
-    <input type="text" id="name" name="name" placeholder="Your name" required>
-  </div>
+          <!-- Functional contact form -->
+          <form action="https://formspree.io/f/mykggrnv" method="POST">
+            <div>
+              <label for="name">Name</label><br>
+              <input type="text" id="name" name="name" placeholder="Your name" required>
+            </div>
+            <div>
+              <label for="email">Email</label><br>
+              <input type="email" id="email" name="_replyto" placeholder="contact@lenidaparis.com" required>
+            </div>
+            <div>
+              <label for="message">Message</label><br>
+              <textarea id="message" name="message" placeholder="Tell me about your pied-à-terre, its location, and how often you use it." required></textarea>
+            </div>
 
-  <div>
-    <label for="email">Email</label><br>
-    <input type="email" id="email" name="_replyto" placeholder="contact@lenidaparis.com" required>
-  </div>
+            <!-- Optional redirect -->
+            <!-- <input type="hidden" name="_next" value="https://lenidaparis.com/thank-you.html"> -->
 
-  <div>
-    <label for="message">Message</label><br>
-    <textarea id="message" name="message" placeholder="Tell me about your pied-à-terre, its location, and how often you use it." required></textarea>
-  </div>
-
-  <!-- Optional: redirect to a thank-you page -->
-  <!-- <input type="hidden" name="_next" value="https://lenidaparis.com/thank-you.html"> -->
-
-  <div>
-    <button type="submit" class="button">Send</button>
-  </div>
-</form>         
+            <div>
+              <button type="submit" class="button">Send</button>
+            </div>
+          </form>
         </div>
+
         <div class="contact-details">
           <div class="contact-label">Direct contact</div>
           <p>
             You can also reach me directly by email or phone:
           </p>
           <p>
-            <strong>Email:</strong> your-email@example.com<br>
-            <strong>Phone:</strong> +33 6 00 00 00 00
+            <strong>Email:</strong> <a href="mailto:contact@lenidaparis.com">contact@lenidaparis.com</a><br>
+            <strong>Phone:</strong> +33 6 45 74 85 21
           </p>
+
           <div class="contact-label" style="margin-top:1.25rem;">Area</div>
           <p>
             I am based in Paris and mainly work within Paris intra-muros.
